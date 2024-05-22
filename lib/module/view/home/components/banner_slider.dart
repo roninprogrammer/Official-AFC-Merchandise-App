@@ -9,6 +9,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class BannerPanel extends StatefulWidget {
+  const BannerPanel({super.key});
+
   @override
   _BannerPanelState createState() => _BannerPanelState();
 }
@@ -68,7 +70,7 @@ class _BannerPanelState extends State<BannerPanel> {
                   height: entry.key == appController.carousalIndex.value
                       ? 8.0
                       : 6.0,
-                  margin: EdgeInsets.symmetric(vertical: 8.0, horizontal: 4.0),
+                  margin: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 4.0),
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     color: entry.key == appController.carousalIndex.value
@@ -137,8 +139,8 @@ class BannerItem extends StatelessWidget {
                 width: getScreeWidth(100),
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                      primary: kPrimary,
-                      shape: RoundedRectangleBorder(
+                      backgroundColor: kPrimary,
+                      shape: const RoundedRectangleBorder(
                         borderRadius: BorderRadius.zero,
                       )),
                   onPressed: () => Get.toNamed(AppRoute.productPage),

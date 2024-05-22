@@ -34,7 +34,7 @@ class ProductPage extends StatelessWidget {
                       color: Colors.white,
                     ),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   ActionIcon(icon: searchIcon, press: () {}),
                   getHorizontalSpace(15),
                   ActionIcon(
@@ -49,9 +49,9 @@ class ProductPage extends StatelessWidget {
             ),
             SizedBox(
               height: getScreenHeight(80),
-              child: ProductTabs(),
+              child: const ProductTabs(),
             ),
-            Expanded(
+            const Expanded(
               child: ProductTabItems(),
             )
           ],

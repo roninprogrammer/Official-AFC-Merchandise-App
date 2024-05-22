@@ -37,17 +37,17 @@ class _ProductDetailsState extends State<ProductDetails> {
       child: Obx(
         () => Scaffold(
           body: dataCtrl.detailsLoading.value
-              ? DetailsPlaceholder()
+              ? const DetailsPlaceholder()
               : Column(
                   children: [
-                    DetailsAppBar(),
+                    const DetailsAppBar(),
                     Expanded(
                       child: ListView(
                         controller: appCtrl.detailsPageScrollCtrl,
                         children: [
-                          Info(),
+                          const Info(),
                           getVerticalSpace(25),
-                          DescriptionPanel(),
+                          const DescriptionPanel(),
                           getVerticalSpace(30),
                           // RecommenedProduct(),
                         ],
@@ -70,7 +70,7 @@ class DetailsAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     AppController appCtrl = Get.find();
     return AppBarCard(
-      color: Color(0xffF1F1F1),
+      color: const Color(0xffF1F1F1),
       childWidget: Row(
         children: [
           InkWell(
@@ -88,7 +88,7 @@ class DetailsAppBar extends StatelessWidget {
               color: kPrimary,
             ),
           ),
-          Spacer(),
+          const Spacer(),
           ActionIcon(
               icon: searchIcon,
               press: () {

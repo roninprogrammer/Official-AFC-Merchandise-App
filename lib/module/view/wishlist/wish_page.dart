@@ -19,7 +19,7 @@ class WishPage extends StatelessWidget {
         body: Obx(
           () => Column(
             children: [
-              WishAppBar(),
+              const WishAppBar(),
               if (cart.wishList.isEmpty)
                 Expanded(
                   child: Column(
@@ -46,7 +46,7 @@ class WishPage extends StatelessWidget {
                   ),
                 )
               else
-                WishList(),
+                const WishList(),
             ],
           ),
         ),

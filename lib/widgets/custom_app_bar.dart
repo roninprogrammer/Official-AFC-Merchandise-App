@@ -20,7 +20,7 @@ class AppBarCard extends StatelessWidget {
       height: getScreenHeight(70),
       width: double.infinity,
       alignment: Alignment.center,
-      padding: EdgeInsets.symmetric(horizontal: 15),
+      padding: const EdgeInsets.symmetric(horizontal: 15),
       child: childWidget,
     );
   }

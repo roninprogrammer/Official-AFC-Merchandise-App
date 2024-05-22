@@ -44,19 +44,19 @@ class SearchResultPage extends StatelessWidget {
               ),
               Expanded(
                 child: data.searchLoading.value
-                    ? Center(
+                    ? const Center(
                         child: LoadingIndicator(),
                       )
                     : data.searchData.value.products!.isEmpty
-                        ? Center(
+                        ? const Center(
                             child: Text("No Results Found"),
                           )
                         : GridView.builder(
                             itemCount: data.searchData.value.products!.length,
-                            padding: EdgeInsets.symmetric(
+                            padding: const EdgeInsets.symmetric(
                                 horizontal: 15, vertical: 15),
                             gridDelegate:
-                                SliverGridDelegateWithFixedCrossAxisCount(
+                                const SliverGridDelegateWithFixedCrossAxisCount(
                               crossAxisCount: 2,
                               childAspectRatio: 0.66,
                               crossAxisSpacing: 10,

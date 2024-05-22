@@ -19,7 +19,7 @@ class OrderIndex extends StatelessWidget {
       height: getScreenHeight(35),
       width: getScreeWidth(85),
       alignment: Alignment.center,
-      padding: EdgeInsets.symmetric(horizontal: 5, vertical: 5),
+      padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
       child: Text(
         orderDate,
         style: TextStyle(

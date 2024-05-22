@@ -15,7 +15,7 @@ class FeatureList extends StatelessWidget {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        HeaderText(text: "Feature Deal", press: true),
+        const HeaderText(text: "Feature Deal", press: true),
         getVerticalSpace(15),
         SizedBox(
           height: getScreenHeight(120),
@@ -23,7 +23,7 @@ class FeatureList extends StatelessWidget {
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
             itemCount: featureList.length,
-            padding: EdgeInsets.symmetric(horizontal: 15),
+            padding: const EdgeInsets.symmetric(horizontal: 15),
             itemBuilder: (ctx, index) {
               return FeatureItem(item: featureList[index]);
             },
@@ -46,8 +46,8 @@ class FeatureItem extends StatelessWidget {
     return Container(
       height: getScreenHeight(120),
       width: getScreeWidth(210),
-      margin: EdgeInsets.only(right: 10),
-      padding: EdgeInsets.only(left: 20),
+      margin: const EdgeInsets.only(right: 10),
+      padding: const EdgeInsets.only(left: 20),
       alignment: Alignment.centerLeft,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(4),

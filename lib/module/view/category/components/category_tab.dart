@@ -16,10 +16,10 @@ class CategoryTabs extends StatelessWidget {
     AppController appCtrl = Get.find();
     return Container(
       width: ResponsiveSize.screenWidth * 0.25,
-      color: Color(0xffE5E5E5).withOpacity(0.5),
+      color: const Color(0xffE5E5E5).withOpacity(0.5),
       child: ListView.builder(
         itemCount: categoryList.length,
-        padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
         itemBuilder: (ctx, i) {
           return Obx(
             () => InkWell(
@@ -29,8 +29,8 @@ class CategoryTabs extends StatelessWidget {
               child: Container(
                 height: getScreenHeight(70),
                 width: getScreeWidth(60),
-                margin: EdgeInsets.only(bottom: 10),
-                padding: EdgeInsets.symmetric(vertical: 5, horizontal: 15),
+                margin: const EdgeInsets.only(bottom: 10),
+                padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 15),
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
                   color: appCtrl.categoryIndex.value == i
@@ -39,7 +39,7 @@ class CategoryTabs extends StatelessWidget {
                   borderRadius: BorderRadius.circular(4),
                   boxShadow: [
                     BoxShadow(
-                      offset: Offset(0, 4),
+                      offset: const Offset(0, 4),
                       blurRadius: 4,
                       color: appCtrl.categoryIndex.value == i
                           ? Colors.black.withOpacity(0.25)

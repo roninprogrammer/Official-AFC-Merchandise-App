@@ -19,8 +19,8 @@ class CartList extends StatelessWidget {
     return Expanded(
       child: ListView.separated(
         itemCount: cart.cartList.length,
-        padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
-        separatorBuilder: (ctx, index) => Divider(),
+        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+        separatorBuilder: (ctx, index) => const Divider(),
         itemBuilder: (ctx, index) {
           final image = CloudinaryImage.fromPublicId(
               cloudName, cart.cartList[index].imagePublicId!);
@@ -70,21 +70,22 @@ class CartList extends StatelessWidget {
                                   style: TextStyle(
                                     fontWeight: FontWeight.w500,
                                     fontSize: getTextSize(14),
-                                    color: Color(0xff969696),
+                                    color: const Color(0xff969696),
                                   ),
                                   text:
                                       " x ${cart.cartList[index].quantity} pc"),
                             ],
                           ),
                         ),
-                        Spacer(),
+                        const Spacer(),
                         Row(
                           children: [
                             CounterButton(
                               icon: Icons.remove,
                               press: () {
-                                if (cart.cartList[index].quantity != 1)
+                                if (cart.cartList[index].quantity != 1) {
                                   cart.decrement(index);
+                                }
                               },
                             ),
                             CounterButton(
@@ -107,7 +108,7 @@ class CartList extends StatelessWidget {
                   onTap: () {
                     cart.removeFromCart(index);
                   },
-                  child: CircleAvatar(
+                  child: const CircleAvatar(
                     radius: 15,
                     backgroundColor: Color(0xffF2F2F2),
                     child: Center(

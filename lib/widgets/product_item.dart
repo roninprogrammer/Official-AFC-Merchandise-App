@@ -41,8 +41,8 @@ class ProductItem extends StatelessWidget {
                       ),
                     ),
                   ),
-                  placeholder: (context, url) => ShimmerLoader(),
-                  errorWidget: (context, url, error) => Icon(Icons.error),
+                  placeholder: (context, url) => const ShimmerLoader(),
+                  errorWidget: (context, url, error) => const Icon(Icons.error),
                 ),
                 if (item!.type == 'computers')
                   Positioned(
@@ -109,8 +109,8 @@ class ProductItem extends StatelessWidget {
                       unratedColor: kAppIcon,
                       itemCount: 5,
                       itemSize: 12,
-                      itemPadding: EdgeInsets.symmetric(horizontal: 1.0),
-                      itemBuilder: (context, _) => Icon(
+                      itemPadding: const EdgeInsets.symmetric(horizontal: 1.0),
+                      itemBuilder: (context, _) => const Icon(
                         Icons.star,
                         color: kStar,
                       ),
@@ -136,7 +136,7 @@ class ProductItem extends StatelessWidget {
                           fontWeight: FontWeight.w500,
                           decoration: TextDecoration.lineThrough,
                           fontSize: getTextSize(12),
-                          color: Color(0xff969696),
+                          color: const Color(0xff969696),
                         ),
                         text: item!.type == 'mobile'
                             ? "\$${item!.price! * (25 / 100) + item!.price!}\t\t"

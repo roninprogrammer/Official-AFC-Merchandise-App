@@ -33,12 +33,12 @@ class AuthController extends GetxController {
       if (result['code'] == 200) {
         return true;
       } else {
-        this.errorMsg.value = result['data'];
+        errorMsg.value = result['data'];
         return false;
       }
     } catch (e) {
       print(e.toString());
-      throw e;
+      rethrow;
     } finally {
       isLoading(false);
     }
@@ -60,13 +60,13 @@ class AuthController extends GetxController {
         update();
         return true;
       } else {
-        this.errorMsg.value = result['data'];
+        errorMsg.value = result['data'];
         update();
         return false;
       }
     } catch (e) {
       print(e.toString());
-      throw e;
+      rethrow;
     } finally {
       isLoading(false);
     }
@@ -78,16 +78,16 @@ class AuthController extends GetxController {
     try {
       isLoading(true);
       final result =
-          await AuthServices.instance.userInfo(id: this.userId.value);
+          await AuthServices.instance.userInfo(id: userId.value);
       if (result['code'] == 200) {
-        this.userData.value = result['data'];
+        userData.value = result['data'];
       } else {
-        this.errorMsg.value = result['data'];
+        errorMsg.value = result['data'];
       }
       update();
     } catch (e) {
       print(e.toString());
-      throw e;
+      rethrow;
     } finally {
       isLoading(false);
     }

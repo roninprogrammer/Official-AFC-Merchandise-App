@@ -15,6 +15,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
 class LoginPage extends StatefulWidget {
+  const LoginPage({super.key});
+
   @override
   _LoginPageState createState() => _LoginPageState();
 }
@@ -22,8 +24,8 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   late AuthController auth;
   late AppController appCtrl;
-  TextEditingController _email = TextEditingController();
-  TextEditingController _pass = TextEditingController();
+  final TextEditingController _email = TextEditingController();
+  final TextEditingController _pass = TextEditingController();
   @override
   void initState() {
     super.initState();
@@ -47,7 +49,7 @@ class _LoginPageState extends State<LoginPage> {
           icon: SvgPicture.asset(backIcon),
           onPressed: () => Get.back(),
         ),
-        title: Text("Account"),
+        title: const Text("Account"),
         backgroundColor: kPrimary,
         elevation: 0.0,
       ),
@@ -56,7 +58,7 @@ class _LoginPageState extends State<LoginPage> {
           child: Container(
             height: ResponsiveSize.screenHeight * 0.8,
             width: ResponsiveSize.screenWidth,
-            margin: EdgeInsets.symmetric(horizontal: 20),
+            margin: const EdgeInsets.symmetric(horizontal: 20),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -64,11 +66,11 @@ class _LoginPageState extends State<LoginPage> {
               children: [
                 Container(
                   decoration: BoxDecoration(
-                      color: Color(0xffFFFFFF),
+                      color: const Color(0xffFFFFFF),
                       borderRadius: BorderRadius.circular(0),
                       boxShadow: [
                         BoxShadow(
-                          offset: Offset(0, 2),
+                          offset: const Offset(0, 2),
                           blurRadius: 4,
                           color: Colors.black.withOpacity(0.15),
                         )
@@ -82,7 +84,7 @@ class _LoginPageState extends State<LoginPage> {
                       // crossAxisAlignment: CrossAxisAlignment.center,
                       // mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        AuthHeadingText(text: "Sign In", fontSize: 30),
+                        const AuthHeadingText(text: "Sign In", fontSize: 30),
                         getVerticalSpace(30),
                         TextField(
                           controller: _email,
@@ -102,13 +104,13 @@ class _LoginPageState extends State<LoginPage> {
                             value: appCtrl.isRememberUer.value,
                             controlAffinity: ListTileControlAffinity.leading,
                             contentPadding: EdgeInsets.zero,
-                            title: Text("Remember Me"),
+                            title: const Text("Remember Me"),
                             onChanged: (v) {
                               appCtrl.isRememberUer(v);
                             }),
                         getVerticalSpace(30),
                         if (auth.isLoading.value)
-                          LoadingIndicator()
+                          const LoadingIndicator()
                         else
                           CustomButton(
                             text: "Log In Now",
@@ -152,7 +154,7 @@ class _LoginPageState extends State<LoginPage> {
     } else {
       print("Field are empty");
       ScaffoldMessenger.of(context)
-          .showSnackBar(SnackBar(content: Text("Field can't be empty")));
+          .showSnackBar(const SnackBar(content: Text("Field can't be empty")));
     }
   }
 

@@ -14,7 +14,7 @@ class CustomButton extends StatelessWidget {
   final double? widthValue;
 
   const CustomButton(
-      {this.text,
+      {super.key, this.text,
       this.icon,
       this.isIcon = false,
       this.color = kPrimary,
@@ -32,14 +32,14 @@ class CustomButton extends StatelessWidget {
                 icon!,
                 color: iconColor,
               )
-            : SizedBox(),
+            : const SizedBox(),
         style: ElevatedButton.styleFrom(
-          primary: color,
+          backgroundColor: color,
         ),
         onPressed: press,
         label: Text(
           text!,
-          style: Get.textTheme.subtitle1!
+          style: Get.textTheme.titleMedium!
               .copyWith(fontWeight: FontWeight.w700, color: Colors.white),
         ),
       ),

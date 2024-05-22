@@ -23,15 +23,15 @@ class DialogHelper {
             children: [
               Text(
                 title!,
-                style: Get.textTheme.headline6,
+                style: Get.textTheme.titleLarge,
               ),
-              Text(description!, style: Get.textTheme.bodyText1),
+              Text(description!, style: Get.textTheme.bodyLarge),
               getVerticalSpace(10),
               ElevatedButton(
                 onPressed: () {
                   if (Get.isDialogOpen!) Get.back();
                 },
-                child: Text('Dismiss'),
+                child: const Text('Dismiss'),
               ),
             ],
           ),
@@ -50,7 +50,7 @@ class DialogHelper {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              LoadingIndicator(),
+              const LoadingIndicator(),
               getVerticalSpace(15),
               Text(
                 message,
@@ -75,7 +75,7 @@ class DialogHelper {
   void showConfirmDialog() {
     Get.dialog(
       Dialog(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.zero),
+        shape: const RoundedRectangleBorder(borderRadius: BorderRadius.zero),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -88,14 +88,14 @@ class DialogHelper {
               alignment: Alignment.center,
               child: Text(
                 "Do you want to exit?",
-                style: Get.textTheme.subtitle1!.copyWith(
+                style: Get.textTheme.titleMedium!.copyWith(
                   fontSize: getTextSize(17),
                   fontWeight: FontWeight.w700,
                   color: Colors.white,
                 ),
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 5),
               child: Row(
@@ -122,7 +122,7 @@ class DialogHelper {
   void orderPlacedDialog() {
     Get.dialog(
       Dialog(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.zero),
+        shape: const RoundedRectangleBorder(borderRadius: BorderRadius.zero),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -135,24 +135,24 @@ class DialogHelper {
               alignment: Alignment.center,
               child: Text(
                 "Order has been placed",
-                style: Get.textTheme.subtitle1!.copyWith(
+                style: Get.textTheme.titleMedium!.copyWith(
                     fontSize: getTextSize(17), fontWeight: FontWeight.w700),
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 5),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   TextButton(
-                      onPressed: () => Get.back(), child: Text("Dismiss")),
+                      onPressed: () => Get.back(), child: const Text("Dismiss")),
                   getHorizontalSpace(20),
                   TextButton(
                       onPressed: () {
                         Get.offAndToNamed(AppRoute.orderPage);
                       },
-                      child: Text("Check")),
+                      child: const Text("Check")),
                 ],
               ),
             )
@@ -176,13 +176,13 @@ class PopUpButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-        primary: kLightNavy,
+        backgroundColor: kLightNavy,
         elevation: 0.0,
       ),
       onPressed: press,
       child: Text(
         text!.capitalize!,
-        style: TextStyle(
+        style: const TextStyle(
           fontWeight: FontWeight.w500,
         ),
       ),

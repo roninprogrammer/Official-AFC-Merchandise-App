@@ -16,6 +16,8 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
 class BillingAddress extends StatefulWidget {
+  const BillingAddress({super.key});
+
   @override
   _BillingAddressState createState() => _BillingAddressState();
 }
@@ -95,7 +97,7 @@ class _BillingAddressState extends State<BillingAddress> {
               ),
               Expanded(
                 child: ListView(
-                  padding: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+                  padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
                   children: [
                     Row(
                       children: [
@@ -222,16 +224,17 @@ class _BillingAddressState extends State<BillingAddress> {
 
   payViaCard({@required amount}) async {
     try {
-      int _amount = (amount * 100).toInt();
-      String totalAmount = _amount.toString();
+      int amount0 = (amount * 100).toInt();
+      String totalAmount = amount0.toString();
       DialogHelper.instance.showLoading(message: 'Processing! Please wait.');
       final result = await PaymentService.instance
           .payWithNewCard(amount: totalAmount, currency: 'usd');
       DialogHelper.instance.hideLoading();
       if (result.success!) {
         DialogHelper.instance.orderPlacedDialog();
-      } else
+      } else {
         snackMessage(message: result.message);
+      }
     } catch (e) {
       print(e.toString());
       DialogHelper.instance.hideLoading();

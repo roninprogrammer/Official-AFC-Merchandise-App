@@ -7,13 +7,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class SearchField extends StatelessWidget {
+  const SearchField({super.key});
+
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () => showSearch(context: context, delegate: CustomSearch()),
       child: Container(
         margin: const EdgeInsets.only(right: 20),
-        padding: EdgeInsets.only(left: 20),
+        padding: const EdgeInsets.only(left: 20),
         alignment: Alignment.center,
         height: getScreenHeight(45),
         decoration: searchBoxDecoration(),

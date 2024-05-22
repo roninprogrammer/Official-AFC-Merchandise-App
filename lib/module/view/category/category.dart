@@ -27,7 +27,7 @@ class CategoryPage extends StatelessWidget {
                 color: Colors.white,
               ),
             ),
-            Spacer(),
+            const Spacer(),
             ActionIcon(
                 icon: searchIcon,
                 press: () =>
@@ -42,7 +42,7 @@ class CategoryPage extends StatelessWidget {
           ],
         ),
       ),
-      Expanded(
+      const Expanded(
         child: Row(
           children: [
             CategoryTabs(),

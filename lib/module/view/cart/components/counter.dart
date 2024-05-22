@@ -20,7 +20,7 @@ class CounterButton extends StatelessWidget {
       child: Container(
         height: getScreenHeight(25),
         width: getScreeWidth(25),
-        margin: EdgeInsets.only(right: 8),
+        margin: const EdgeInsets.only(right: 8),
         alignment: Alignment.center,
         decoration: BoxDecoration(
           color: text != null ? Colors.white : kPrimary,

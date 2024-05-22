@@ -19,8 +19,8 @@ class WishList extends StatelessWidget {
     return Expanded(
       child: ListView.separated(
         itemCount: cart.wishList.length,
-        padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
-        separatorBuilder: (ctx, index) => Divider(),
+        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+        separatorBuilder: (ctx, index) => const Divider(),
         itemBuilder: (ctx, index) {
           final item = cart.wishList[index];
           final image =
@@ -86,7 +86,7 @@ class WishList extends StatelessWidget {
                   onTap: () {
                     cart.removeFromWish(item.id!);
                   },
-                  child: CircleAvatar(
+                  child: const CircleAvatar(
                     radius: 15,
                     backgroundColor: Color(0xffF2F2F2),
                     child: Center(

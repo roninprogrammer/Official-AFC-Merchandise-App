@@ -18,7 +18,7 @@ class ProfilePage extends StatelessWidget {
     return Obx(
       () => Column(
         children: [
-          ProfileAppBar(),
+          const ProfileAppBar(),
           if (!appCtrl.userExists.value)
             Expanded(
               child: Center(
@@ -26,7 +26,7 @@ class ProfilePage extends StatelessWidget {
                   onTap: () {
                     Get.toNamed(AppRoute.loginPage);
                   },
-                  child: Text("Try to logged in"),
+                  child: const Text("Try to logged in"),
                 ),
               ),
             )
@@ -39,14 +39,14 @@ class ProfilePage extends StatelessWidget {
                     clipBehavior: Clip.none,
                     children: [
                       CircleAvatar(
-                        backgroundColor: Color(0xffF2F2F2),
+                        backgroundColor: const Color(0xffF2F2F2),
                         radius: getScreeWidth(80),
-                        backgroundImage: NetworkImage(
+                        backgroundImage: const NetworkImage(
                           profileImage,
                           scale: 1.0,
                         ),
                       ),
-                      Positioned(
+                      const Positioned(
                         right: 0,
                         bottom: 10,
                         child: CircleAvatar(
@@ -122,7 +122,7 @@ class TextPanel extends StatelessWidget {
             TextSpan(
               text: '$text',
               style: TextStyle(
-                color: Color(0xff7B7B7B),
+                color: const Color(0xff7B7B7B),
                 fontSize: getTextSize(16),
                 fontWeight: FontWeight.normal,
                 letterSpacing: 0.17,
@@ -152,8 +152,8 @@ class ProfileAppBar extends StatelessWidget {
               color: Colors.white,
             ),
           ),
-          Spacer(),
-          DrawerIcon(),
+          const Spacer(),
+          const DrawerIcon(),
         ],
       ),
     );

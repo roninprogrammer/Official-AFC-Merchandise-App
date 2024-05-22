@@ -78,11 +78,11 @@ class CartListItems {
   int? price;
 
   CartListItems.fromJson(dynamic json, int qty) {
-    this.id = json['_id'];
-    this.name = json['name'];
-    this.quantity = qty;
-    this.imagePublicId = json['image_public_id'];
-    this.price = json['price'];
+    id = json['_id'];
+    name = json['name'];
+    quantity = qty;
+    imagePublicId = json['image_public_id'];
+    price = json['price'];
   }
 
   Map<String, dynamic> toJson() {

@@ -14,7 +14,7 @@ class DescriptionPanel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       children: [
         Service(),
         Description(),
@@ -32,9 +32,9 @@ class Service extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 10),
-      padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
-      decoration: BoxDecoration(color: Colors.white, boxShadow: [
+      margin: const EdgeInsets.only(top: 10),
+      padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+      decoration: const BoxDecoration(color: Colors.white, boxShadow: [
         BoxShadow(
           offset: Offset(0, 4),
           blurRadius: 15,
@@ -107,9 +107,9 @@ class Description extends StatelessWidget {
   Widget build(BuildContext context) {
     DataController dataCtrl = Get.find();
     return Container(
-      margin: EdgeInsets.only(top: 10),
-      padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
-      decoration: BoxDecoration(color: Colors.white, boxShadow: [
+      margin: const EdgeInsets.only(top: 10),
+      padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+      decoration: const BoxDecoration(color: Colors.white, boxShadow: [
         BoxShadow(
           offset: Offset(0, 4),
           blurRadius: 15,
@@ -155,9 +155,9 @@ class ReviewRatings extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 10),
-      padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
-      decoration: BoxDecoration(color: Colors.white, boxShadow: [
+      margin: const EdgeInsets.only(top: 10),
+      padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+      decoration: const BoxDecoration(color: Colors.white, boxShadow: [
         BoxShadow(
           offset: Offset(0, 4),
           blurRadius: 15,
@@ -180,7 +180,7 @@ class ReviewRatings extends StatelessWidget {
               // ),
             ],
           ),
-          Divider(height: 25),
+          const Divider(height: 25),
           // getVerticalSpace(15),
           ...List.generate(
             reivewText.length,
@@ -200,7 +200,7 @@ class ReviewRatings extends StatelessWidget {
                         ],
                       ),
                     ),
-                    Spacer(),
+                    const Spacer(),
                     RatingBar.builder(
                       initialRating: 3,
                       minRating: 1,
@@ -209,8 +209,8 @@ class ReviewRatings extends StatelessWidget {
                       unratedColor: kAppIcon,
                       itemCount: 5,
                       itemSize: 14,
-                      itemPadding: EdgeInsets.symmetric(horizontal: 1.0),
-                      itemBuilder: (context, _) => Icon(
+                      itemPadding: const EdgeInsets.symmetric(horizontal: 1.0),
+                      itemBuilder: (context, _) => const Icon(
                         Icons.star,
                         color: kStar,
                       ),

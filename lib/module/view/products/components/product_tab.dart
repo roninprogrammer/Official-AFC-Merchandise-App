@@ -15,7 +15,7 @@ class ProductTabs extends StatelessWidget {
     AppController appCtrl = Get.find();
     return ListView.builder(
       scrollDirection: Axis.horizontal,
-      padding: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
+      padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 15),
       itemCount: categoryList.length,
       shrinkWrap: true,
       primary: true,
@@ -27,18 +27,18 @@ class ProductTabs extends StatelessWidget {
             },
             child: Container(
               height: getScreenHeight(35),
-              margin: EdgeInsets.only(right: 10),
-              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 3),
+              margin: const EdgeInsets.only(right: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 3),
               alignment: Alignment.center,
               decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(5),
                   boxShadow: [
                     BoxShadow(
-                      offset: Offset(0, 2),
+                      offset: const Offset(0, 2),
                       blurRadius: 15,
                       color: appCtrl.productIndex.value == index
-                          ? Color.fromRGBO(0, 0, 0, 0.1)
+                          ? const Color.fromRGBO(0, 0, 0, 0.1)
                           : Colors.transparent,
                     )
                   ]),

@@ -82,16 +82,16 @@ class OrderItem extends StatelessWidget {
       leading: Image.network(image.url),
       title: Text(
         item.name!,
-        style: TextStyle(fontWeight: FontWeight.w600),
+        style: const TextStyle(fontWeight: FontWeight.w600),
       ),
       subtitle: RichText(
         text: TextSpan(
             text: '\$${item.price}',
-            style: TextStyle(color: kPrimary),
+            style: const TextStyle(color: kPrimary),
             children: [
               TextSpan(
                 text: ' x ${item.quantity} pc',
-                style: TextStyle(
+                style: const TextStyle(
                   color: kLightText,
                 ),
               )

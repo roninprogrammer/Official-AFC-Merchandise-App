@@ -33,7 +33,7 @@ class Info extends StatelessWidget {
           Container(
             height: getScreenHeight(232),
             width: double.infinity,
-            color: Color(0xffF1F1F1),
+            color: const Color(0xffF1F1F1),
             child: Image.network(
               image.url,
               fit: BoxFit.contain,
@@ -41,7 +41,7 @@ class Info extends StatelessWidget {
           ),
           getVerticalSpace(20),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20),
+            padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Row(
               children: [
                 Column(
@@ -54,7 +54,7 @@ class Info extends StatelessWidget {
                           fontWeight: FontWeight.w500,
                           decoration: TextDecoration.lineThrough,
                           fontSize: getTextSize(16),
-                          color: Color(0xff969696),
+                          color: const Color(0xff969696),
                         ),
                         text: dataCtrl.productDetails.value.type == 'mobile'
                             ? "\$${dataCtrl.productDetails.value.price! * (25 / 100) + dataCtrl.productDetails.value.price!}\t\t"
@@ -83,8 +83,8 @@ class Info extends StatelessWidget {
                           unratedColor: kAppIcon,
                           itemCount: 5,
                           itemSize: 12,
-                          itemPadding: EdgeInsets.symmetric(horizontal: 1.0),
-                          itemBuilder: (context, _) => Icon(
+                          itemPadding: const EdgeInsets.symmetric(horizontal: 1.0),
+                          itemBuilder: (context, _) => const Icon(
                             Icons.star,
                             color: kStar,
                           ),
@@ -103,10 +103,10 @@ class Info extends StatelessWidget {
                     ),
                   ],
                 ),
-                Spacer(),
+                const Spacer(),
                 ActionIcon(
                   icon: dataCtrl.wishExists.value ? heartFillIcon : heartIcon,
-                  bgColor: Color(0xffF8F8F8),
+                  bgColor: const Color(0xffF8F8F8),
                   press: dataCtrl.itemExists.value
                       ? () {
                           SnackMessage.instance.showSnack(
@@ -133,7 +133,7 @@ class Info extends StatelessWidget {
           ),
           getVerticalSpace(15),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20),
+            padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Text(
               "${dataCtrl.productDetails.value.name}",
               textAlign: TextAlign.start,
@@ -150,8 +150,8 @@ class Info extends StatelessWidget {
           ),
           getVerticalSpace(30),
           Container(
-            padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
-            margin: EdgeInsets.symmetric(horizontal: 20),
+            padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+            margin: const EdgeInsets.symmetric(horizontal: 20),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(3),
                 border: Border.all(
@@ -205,12 +205,11 @@ class Info extends StatelessWidget {
           getVerticalSpace(40),
           if (dataCtrl.itemExists.value)
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 20),
+              margin: const EdgeInsets.symmetric(horizontal: 20),
               width: getScreeWidth(335),
               child: OutlinedButton(
                 style: OutlinedButton.styleFrom(
-                    primary: kPrimary,
-                    shape: RoundedRectangleBorder(
+                    foregroundColor: kPrimary, shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(5))),
                 onPressed: () {},
                 child: Text(
@@ -225,7 +224,7 @@ class Info extends StatelessWidget {
             )
           else
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20),
+              padding: const EdgeInsets.symmetric(horizontal: 20),
               child: CustomButton(
                 widthValue: getScreeWidth(335),
                 text: 'Add To Cart',

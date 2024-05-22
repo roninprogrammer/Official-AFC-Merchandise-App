@@ -29,8 +29,8 @@ class ProductService {
       }
     } on SocketException {
       throw FetchDataException('No Internet connection', uri.toString());
-    } on Exception catch (e) {
-      throw e;
+    } on Exception {
+      rethrow;
     }
   }
 
@@ -52,8 +52,8 @@ class ProductService {
       }
     } on SocketException {
       throw FetchDataException('No Internet connection', uri.toString());
-    } on Exception catch (e) {
-      throw e;
+    } on Exception {
+      rethrow;
     }
   }
 
@@ -76,8 +76,8 @@ class ProductService {
       }
     } on SocketException {
       throw FetchDataException('No Internet connection', uri.toString());
-    } on Exception catch (e) {
-      throw e;
+    } on Exception {
+      rethrow;
     }
   }
 
@@ -100,8 +100,8 @@ class ProductService {
       }
     } on SocketException {
       throw FetchDataException('No Internet connection', uri.toString());
-    } on Exception catch (e) {
-      throw e;
+    } on Exception {
+      rethrow;
     }
   }
 }

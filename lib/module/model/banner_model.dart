@@ -6,16 +6,16 @@ class BannerModel {
   BannerModel({this.title, this.offerText, this.imgUrl});
 
   BannerModel.fromMap(Map<String, dynamic> map) {
-    this.title = map['title']!;
-    this.offerText = map['subtitle']!;
-    this.imgUrl = map['imgUrl']!;
+    title = map['title']!;
+    offerText = map['subtitle']!;
+    imgUrl = map['imgUrl']!;
   }
 
   Map<String, dynamic> toMap() {
-    final Map<String, dynamic> map = new Map<String, dynamic>();
-    map['title'] = this.title;
-    map['subtitle'] = this.offerText;
-    map['imgUrl'] = this.imgUrl;
+    final Map<String, dynamic> map = <String, dynamic>{};
+    map['title'] = title;
+    map['subtitle'] = offerText;
+    map['imgUrl'] = imgUrl;
 
     return map;
   }

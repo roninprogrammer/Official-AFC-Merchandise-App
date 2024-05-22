@@ -29,9 +29,9 @@ class HomePage extends StatelessWidget {
                   children: [
                     Image.asset(ukFlagImg, height: 20, width: 20),
                     getHorizontalSpace(15),
-                    Flexible(child: SearchField()),
+                    const Flexible(child: SearchField()),
                     getHorizontalSpace(5),
-                    DrawerIcon()
+                    const DrawerIcon()
                   ],
                 ),
               ),
@@ -39,17 +39,17 @@ class HomePage extends StatelessWidget {
                 child: Stack(
                   children: [
                     ListView(
-                      padding: EdgeInsets.only(top: 0, bottom: 15),
+                      padding: const EdgeInsets.only(top: 0, bottom: 15),
                       controller: appCtrl.homeScrollCtrl,
                       children: [
-                        BannerPanel(),
-                        FeatureList(),
+                        const BannerPanel(),
+                        const FeatureList(),
                         getVerticalSpace(30),
-                        BestSeller(),
+                        const BestSeller(),
                         getVerticalSpace(30),
-                        FlashSale(),
+                        const FlashSale(),
                         getVerticalSpace(30),
-                        SpecialProduct(),
+                        const SpecialProduct(),
                       ],
                     ),
                     AnimatedPositioned(
@@ -63,7 +63,7 @@ class HomePage extends StatelessWidget {
                         onTap: () {
                           appCtrl.scrollUp();
                         },
-                        child: CircleAvatar(
+                        child: const CircleAvatar(
                           backgroundColor: kLightNavy,
                           radius: 16,
                           child: Icon(

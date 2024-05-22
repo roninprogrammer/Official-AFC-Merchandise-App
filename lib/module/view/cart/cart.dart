@@ -20,7 +20,7 @@ class CartPage extends StatelessWidget {
     return Obx(
       () => Column(
         children: [
-          CartAppBar(),
+          const CartAppBar(),
           if (cart.cartList.isEmpty)
             Expanded(
               child: Column(
@@ -46,7 +46,7 @@ class CartPage extends StatelessWidget {
               ),
             )
           else
-            Expanded(
+            const Expanded(
               child: Column(
                 children: [
                   CartList(),
@@ -79,7 +79,7 @@ class CartAppBar extends StatelessWidget {
               color: Colors.white,
             ),
           ),
-          Spacer(),
+          const Spacer(),
           ActionIcon(
             icon: searchIcon,
             press: () => showSearch(context: context, delegate: CustomSearch()),

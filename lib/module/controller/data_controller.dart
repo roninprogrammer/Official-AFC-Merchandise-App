@@ -78,15 +78,17 @@ class DataController extends GetxController with BaseController {
         final checkWishItem = cart.wishList
             .where((element) => element.id == productDetails.value.id);
 
-        if (checkCartItem.isNotEmpty)
+        if (checkCartItem.isNotEmpty) {
           itemExists(true);
-        else
+        } else {
           itemExists(false);
+        }
 
-        if (checkWishItem.isNotEmpty)
+        if (checkWishItem.isNotEmpty) {
           wishExists(true);
-        else
+        } else {
           wishExists(false);
+        }
       } else {
         errorMsg.value = result['data'];
       }

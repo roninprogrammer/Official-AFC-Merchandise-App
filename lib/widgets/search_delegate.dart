@@ -13,7 +13,7 @@ class CustomSearch extends SearchDelegate {
     return [
       if (list.isNotEmpty)
         IconButton(
-          icon: Icon(Icons.clear),
+          icon: const Icon(Icons.clear),
           onPressed: () {
             query = "";
             data.searchData.value.products!.clear();
@@ -25,7 +25,7 @@ class CustomSearch extends SearchDelegate {
   @override
   Widget buildLeading(BuildContext context) {
     return IconButton(
-        icon: Icon(Icons.arrow_back),
+        icon: const Icon(Icons.arrow_back),
         onPressed: () {
           close(context, null);
         });
@@ -33,17 +33,18 @@ class CustomSearch extends SearchDelegate {
 
   @override
   Widget buildResults(BuildContext context) {
-    if (data.searchData.value.products == null)
-      return Center(
+    if (data.searchData.value.products == null) {
+      return const Center(
         child: Text("Please write something..."),
       );
+    }
     return Obx(
       () => data.searchLoading.value
-          ? Center(
+          ? const Center(
               child: CircularProgressIndicator(),
             )
           : data.searchData.value.products!.isEmpty
-              ? Center(
+              ? const Center(
                   child: Text("No Results Found"),
                 )
               : Column(
@@ -52,8 +53,8 @@ class CustomSearch extends SearchDelegate {
                       child: GridView.builder(
                         itemCount: data.searchData.value.products!.length,
                         padding:
-                            EdgeInsets.symmetric(horizontal: 15, vertical: 15),
-                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                            const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+                        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                           crossAxisCount: 2,
                           childAspectRatio: 0.66,
                           crossAxisSpacing: 10,
@@ -96,16 +97,16 @@ class CustomSearch extends SearchDelegate {
         Expanded(
           child: ListView.separated(
             itemCount: list.length,
-            separatorBuilder: (context, index) => Divider(),
+            separatorBuilder: (context, index) => const Divider(),
             itemBuilder: (ctx, index) {
               return ListTile(
-                contentPadding: EdgeInsets.all(10),
+                contentPadding: const EdgeInsets.all(10),
                 horizontalTitleGap: 10,
                 title: Text(
                   list[index].name.toString().capitalize!,
                   // style: TextStyle(font),
                 ),
-                trailing: Icon(Icons.search),
+                trailing: const Icon(Icons.search),
                 onTap: () async {
                   data.searchProduct(type: list[index].name);
 

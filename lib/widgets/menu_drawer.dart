@@ -10,6 +10,8 @@ import '../constants/size.dart';
 import '../module/controller/app_controller.dart';
 
 class MenuDrawer extends StatelessWidget {
+  const MenuDrawer({super.key});
+
   @override
   Widget build(BuildContext context) {
     AppController appCtrl = Get.find();
@@ -35,7 +37,7 @@ class MenuDrawer extends StatelessWidget {
                       mainAxisSize: MainAxisSize.min,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Container(
+                        SizedBox(
                             height: getScreenHeight(30),
                             // width: getScreeWidth(55),
                             child: Text(
@@ -74,28 +76,28 @@ class MenuDrawer extends StatelessWidget {
                 }
               },
             ),
-            Divider(indent: 10, endIndent: 10),
+            const Divider(indent: 10, endIndent: 10),
             DrawerItem(
                 title: "Products",
                 icon: productIcon,
                 press: () {
                   Get.offAndToNamed(AppRoute.productPage);
                 }),
-            Divider(indent: 10, endIndent: 10),
+            const Divider(indent: 10, endIndent: 10),
             DrawerItem(
                 title: "My Orders",
                 icon: orderBagIcon,
                 press: () {
                   Get.offAndToNamed(AppRoute.orderPage);
                 }),
-            Divider(indent: 10, endIndent: 10),
+            const Divider(indent: 10, endIndent: 10),
             DrawerItem(
                 title: "Wishlist\t(${cart.wishList.length})",
                 icon: heartIcon,
                 press: () {
                   Get.offAndToNamed(AppRoute.wishPage);
                 }),
-            Divider(indent: 10, endIndent: 10),
+            const Divider(indent: 10, endIndent: 10),
             DrawerItem(
               title: "About",
               icon: aboutIcon,
@@ -103,7 +105,7 @@ class MenuDrawer extends StatelessWidget {
                 Get.offAndToNamed(AppRoute.aboutPage);
               },
             ),
-            Divider(indent: 10, endIndent: 10),
+            const Divider(indent: 10, endIndent: 10),
             DrawerItem(
               title: "Terms & Conditions",
               icon: conditionsIcon,
@@ -115,7 +117,7 @@ class MenuDrawer extends StatelessWidget {
               Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Divider(indent: 10, endIndent: 10),
+                  const Divider(indent: 10, endIndent: 10),
                   DrawerItem(
                     title: "Sign Out",
                     icon: logoutIcon,
@@ -134,7 +136,7 @@ class MenuDrawer extends StatelessWidget {
               Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Divider(indent: 10, endIndent: 10),
+                  const Divider(indent: 10, endIndent: 10),
                   DrawerItem(
                     title: "LogIn",
                     icon: loginIcon,
@@ -145,7 +147,7 @@ class MenuDrawer extends StatelessWidget {
                   ),
                 ],
               ),
-            Divider(
+            const Divider(
               indent: 10,
               endIndent: 10,
             ),
@@ -157,7 +159,7 @@ class MenuDrawer extends StatelessWidget {
 }
 
 class DrawerItem extends StatelessWidget {
-  const DrawerItem({this.title, this.press, this.icon, this.textColor = kDark});
+  const DrawerItem({super.key, this.title, this.press, this.icon, this.textColor = kDark});
   final String? title;
   final VoidCallback? press;
   final String? icon;
@@ -168,19 +170,19 @@ class DrawerItem extends StatelessWidget {
     return ListTile(
       minLeadingWidth: 0,
       minVerticalPadding: 0,
-      contentPadding: EdgeInsets.symmetric(horizontal: 20),
+      contentPadding: const EdgeInsets.symmetric(horizontal: 20),
       leading: SvgPicture.asset(
         icon!,
         color: textColor,
         height: getScreeWidth(20),
         width: getScreeWidth(20),
       ),
-      title: Container(
+      title: SizedBox(
         height: getScreenHeight(25),
         child: Text(title!,
-            style: Get.textTheme.subtitle2!.copyWith(color: textColor)),
+            style: Get.textTheme.titleSmall!.copyWith(color: textColor)),
       ),
-      trailing: Icon(Icons.arrow_forward_ios, size: 10),
+      trailing: const Icon(Icons.arrow_forward_ios, size: 10),
       onTap: press,
     );
   }

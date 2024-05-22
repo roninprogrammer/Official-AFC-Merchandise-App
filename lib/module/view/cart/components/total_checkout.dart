@@ -14,8 +14,8 @@ class TotalAndCheckout extends StatelessWidget {
   Widget build(BuildContext context) {
     CartController cart = Get.find();
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 15),
-      padding: EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+      margin: const EdgeInsets.symmetric(horizontal: 15),
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
       decoration: BoxDecoration(
         color: Colors.white,
         border: Border.all(
@@ -32,7 +32,7 @@ class TotalAndCheckout extends StatelessWidget {
               style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: getTextSize(16),
-                color: Color(0xff969696),
+                color: const Color(0xff969696),
               ),
               text: "Sub-Total: \t",
               children: [
@@ -48,7 +48,7 @@ class TotalAndCheckout extends StatelessWidget {
           ),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
-              primary: kPrimary,
+              backgroundColor: kPrimary,
             ),
             onPressed: () {
               Get.toNamed(AppRoute.addressPage);

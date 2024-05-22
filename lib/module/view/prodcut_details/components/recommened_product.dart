@@ -18,7 +18,7 @@ class RecommenedProduct extends StatelessWidget {
     return SizedBox(
       child: Column(
         children: [
-          HeaderText(
+          const HeaderText(
             text: 'Recommended Product',
             press: true,
           ),
@@ -28,7 +28,7 @@ class RecommenedProduct extends StatelessWidget {
             width: double.infinity,
             child: ListView.builder(
                 controller: appCtrl.detailsPageScrollCtrl,
-                padding: EdgeInsets.symmetric(horizontal: 15),
+                padding: const EdgeInsets.symmetric(horizontal: 15),
                 itemCount: 4,
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (ctx, index) {

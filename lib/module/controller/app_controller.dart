@@ -23,7 +23,7 @@ class AppController extends GetxController {
   RxBool showScrollUp = false.obs;
   RxBool isRememberUer = false.obs;
   var flashEndTime =
-      DateTime.now().add(new Duration(days: 2)).millisecondsSinceEpoch;
+      DateTime.now().add(const Duration(days: 2)).millisecondsSinceEpoch;
   @override
   void onInit() {
     super.onInit();
@@ -45,12 +45,12 @@ class AppController extends GetxController {
     AuthController auth = Get.find();
     final box = GetStorage();
     // final rememberBox = GetStorage();
-    final _token = box.read('token');
-    final _id = box.read('id');
+    final token = box.read('token');
+    final id = box.read('id');
     // isRememberUer.value = rememberBox.read('remember') ?? false;
-    if (_token != null && _id != null) {
-      auth.userId.value = _id.toString();
-      auth.token.value = _token.toString();
+    if (token != null && id != null) {
+      auth.userId.value = id.toString();
+      auth.token.value = token.toString();
       auth.userDataCtrl();
       userExists(true);
     } else {

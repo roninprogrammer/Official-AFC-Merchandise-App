@@ -16,16 +16,16 @@ class CategoryTabItems extends StatelessWidget {
     AppController appCtrl = Get.find();
     return Container(
       width: ResponsiveSize.screenWidth * 0.75,
-      padding: EdgeInsets.symmetric(vertical: 10),
+      padding: const EdgeInsets.symmetric(vertical: 10),
       child: PageView.builder(
         itemCount: categoryList.length,
         controller: appCtrl.categoryPageCtrl,
         scrollDirection: Axis.vertical,
-        physics: NeverScrollableScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(),
         itemBuilder: (ctx, index) {
           return GridView.builder(
             itemCount: categoryItemsList.length,
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 3,
               childAspectRatio: 0.75,
               crossAxisSpacing: 0,

@@ -29,7 +29,7 @@ class AuthServices {
         body: jsonEncode(payload),
         headers: header,
       );
-      Map<String, dynamic> responseResult = Map<String, dynamic>();
+      Map<String, dynamic> responseResult = <String, dynamic>{};
       final responseData = jsonDecode(response.body);
       if (response.statusCode == 200) {
         responseResult = {
@@ -45,10 +45,10 @@ class AuthServices {
       return responseResult;
     } on Exception catch (e) {
       print(e.toString());
-      throw e;
+      rethrow;
     } catch (e) {
       print(e.toString());
-      throw e;
+      rethrow;
     }
   }
 
@@ -64,7 +64,7 @@ class AuthServices {
         body: jsonEncode(payload),
         headers: header,
       );
-      Map<String, dynamic> responseResult = Map<String, dynamic>();
+      Map<String, dynamic> responseResult = <String, dynamic>{};
       final responseData = jsonDecode(response.body);
       if (response.statusCode == 200) {
         responseResult = {"code": response.statusCode, "data": responseData};
@@ -77,10 +77,10 @@ class AuthServices {
       return responseResult;
     } on Exception catch (e) {
       print(e.toString());
-      throw e;
+      rethrow;
     } catch (e) {
       print(e.toString());
-      throw e;
+      rethrow;
     }
   }
 
@@ -106,10 +106,10 @@ class AuthServices {
       }
     } on Exception catch (e) {
       print(e.toString());
-      throw e;
+      rethrow;
     } catch (e) {
       print(e.toString());
-      throw e;
+      rethrow;
     }
   }
 }

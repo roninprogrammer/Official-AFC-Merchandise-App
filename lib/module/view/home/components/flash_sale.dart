@@ -19,7 +19,7 @@ class FlashSale extends StatelessWidget {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        HeaderText(
+        const HeaderText(
             text: "Flash Sale", trailWidget: FlashCounter(), press: false),
         getVerticalSpace(15),
         SizedBox(
@@ -28,14 +28,14 @@ class FlashSale extends StatelessWidget {
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
             itemCount: 4,
-            padding: EdgeInsets.symmetric(horizontal: 15),
+            padding: const EdgeInsets.symmetric(horizontal: 15),
             itemBuilder: (ctx, index) {
-              if (data.isLoading.value)
+              if (data.isLoading.value) {
                 return ShimmerLoader(
                   height: getScreenHeight(260),
                   width: getScreeWidth(165),
                 );
-              else
+              } else {
                 return Padding(
                   padding: const EdgeInsets.only(right: 15.0),
                   child: ProductItem(
@@ -48,6 +48,7 @@ class FlashSale extends StatelessWidget {
                     },
                   ),
                 );
+              }
             },
           ),
         ),
@@ -69,7 +70,7 @@ class FlashCounter extends StatelessWidget {
       widgetBuilder: (_, time) {
         if (time == null) {
           return Container(
-            padding: EdgeInsets.symmetric(horizontal: 10, vertical: 3),
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 3),
             decoration: BoxDecoration(
                 color: kRed, borderRadius: BorderRadius.circular(5)),
             child: Text(
@@ -97,11 +98,11 @@ class FlashCounter extends StatelessWidget {
             ),
             getHorizontalSpace(10),
             TimerCard(leftTime: time.days),
-            TimeDivider(),
+            const TimeDivider(),
             TimerCard(leftTime: time.hours),
-            TimeDivider(),
+            const TimeDivider(),
             TimerCard(leftTime: time.min),
-            TimeDivider(),
+            const TimeDivider(),
             TimerCard(leftTime: time.sec),
           ],
         );
@@ -122,7 +123,7 @@ class TimerCard extends StatelessWidget {
     return Container(
       height: getScreenHeight(20),
       width: getScreeWidth(20),
-      padding: EdgeInsets.all(0),
+      padding: const EdgeInsets.all(0),
       alignment: Alignment.center,
       decoration: BoxDecoration(
         color: kPrimary,
@@ -149,7 +150,7 @@ class TimeDivider extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return const SizedBox(
       height: 20,
       child: Text(
         " : ",

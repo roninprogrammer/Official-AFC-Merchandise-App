@@ -3,7 +3,7 @@ import 'package:afc_assignment/constants/size.dart';
 import 'package:flutter/material.dart';
 
 class AuthHeadingText extends StatelessWidget {
-  const AuthHeadingText({this.text, @required this.fontSize, this.textAlign});
+  const AuthHeadingText({super.key, this.text, @required this.fontSize, this.textAlign});
   final String? text;
   final double? fontSize;
   final TextAlign? textAlign;

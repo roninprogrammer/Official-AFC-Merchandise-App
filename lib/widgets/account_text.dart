@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class AccountText extends StatelessWidget {
-  const AccountText({this.text, this.authText, this.press});
+  const AccountText({super.key, this.text, this.authText, this.press});
   final String? text;
   final String? authText;
   final VoidCallback? press;
@@ -14,7 +14,7 @@ class AccountText extends StatelessWidget {
     return RichText(
       text: TextSpan(
         text: "$text?\t\t",
-        style: Get.textTheme.subtitle2!.copyWith(
+        style: Get.textTheme.titleSmall!.copyWith(
           color: kLightText,
           fontWeight: FontWeight.w400,
         ),
@@ -22,7 +22,7 @@ class AccountText extends StatelessWidget {
           TextSpan(
             text: authText,
             recognizer: TapGestureRecognizer()..onTap = press,
-            style: Get.textTheme.subtitle2!.copyWith(
+            style: Get.textTheme.titleSmall!.copyWith(
               color: kDark,
               fontWeight: FontWeight.w700,
             ),

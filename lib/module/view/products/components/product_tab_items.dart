@@ -18,12 +18,12 @@ class ProductTabItems extends StatelessWidget {
     return PageView.builder(
       itemCount: productTabs.length,
       controller: appCtrl.productPageCtrl,
-      physics: NeverScrollableScrollPhysics(),
+      physics: const NeverScrollableScrollPhysics(),
       itemBuilder: (context, index) {
         return GridView.builder(
           itemCount: data.productData.value.products!.length,
-          padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
             childAspectRatio: 0.69,
             crossAxisSpacing: 15,

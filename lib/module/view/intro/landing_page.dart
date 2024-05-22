@@ -23,7 +23,7 @@ class LandingPage extends StatelessWidget {
       },
       child: SafeArea(
         child: Scaffold(
-          endDrawer: MenuDrawer(),
+          endDrawer: const MenuDrawer(),
           endDrawerEnableOpenDragGesture: false,
           body: LayoutBuilder(
             builder: (ctx, constrains) {
@@ -34,7 +34,7 @@ class LandingPage extends StatelessWidget {
                   builder: (app) => PageView.builder(
                     itemCount: screenPages.length,
                     controller: app.appPageCtrl,
-                    physics: NeverScrollableScrollPhysics(),
+                    physics: const NeverScrollableScrollPhysics(),
                     itemBuilder: (ctx, index) {
                       return screenPages[app.navBarIndex.value];
                     },
@@ -43,7 +43,7 @@ class LandingPage extends StatelessWidget {
               );
             },
           ),
-          bottomNavigationBar: BottomNavBar(),
+          bottomNavigationBar: const BottomNavBar(),
         ),
       ),
     );

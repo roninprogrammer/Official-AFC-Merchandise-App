@@ -7,21 +7,23 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
 class BottomNavBar extends StatelessWidget {
+  const BottomNavBar({super.key});
+
   @override
   Widget build(BuildContext context) {
     AppController navCtrl = Get.find();
     return Obx(
       () => Container(
         height: getScreenHeight(80),
-        padding: EdgeInsets.symmetric(horizontal: 25),
+        padding: const EdgeInsets.symmetric(horizontal: 25),
         alignment: Alignment.center,
         decoration: BoxDecoration(
           color: Colors.white,
           boxShadow: [
             BoxShadow(
-              offset: Offset(0, 2),
+              offset: const Offset(0, 2),
               blurRadius: 4,
-              color: Color(0xff000000).withOpacity(0.25),
+              color: const Color(0xff000000).withOpacity(0.25),
             )
           ],
         ),

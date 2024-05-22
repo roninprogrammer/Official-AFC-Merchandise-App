@@ -30,15 +30,15 @@ class _SplashPageState extends State<SplashPage> {
             Expanded(
               child: Container(
                 alignment: Alignment.center,
-                margin: EdgeInsets.symmetric(horizontal: 20),
+                margin: const EdgeInsets.symmetric(horizontal: 20),
                 child: Image.asset(
                   splash,
                   fit: BoxFit.cover,
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(20.0),
+            const Padding(
+              padding: EdgeInsets.all(20.0),
               child: Text("Version: 1.0.0"),
             ),
           ],

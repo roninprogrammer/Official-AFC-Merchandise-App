@@ -10,13 +10,13 @@ import 'package:flutter_svg/svg.dart';
 const kPadding = 20;
 
 List<Widget> screenPages = [
-  HomePage(),
-  CategoryPage(),
-  CartPage(),
-  ProfilePage(),
+  const HomePage(),
+  const CategoryPage(),
+  const CartPage(),
+  const ProfilePage(),
 ];
 InputDecoration buildCredentialDecoration({@required hintText, icon}) {
-  var outlineInputBorder = OutlineInputBorder(
+  var outlineInputBorder = const OutlineInputBorder(
       borderSide: BorderSide(width: 1, color: Color(0xffF5F5F5)));
   return InputDecoration(
     hintText: hintText,
@@ -29,13 +29,13 @@ InputDecoration buildCredentialDecoration({@required hintText, icon}) {
             onPressed: null,
           )
         : null,
-    fillColor: Color(0xffF5F5F5),
+    fillColor: const Color(0xffF5F5F5),
     filled: true,
     floatingLabelBehavior: FloatingLabelBehavior.always,
     enabledBorder: outlineInputBorder,
     border: outlineInputBorder,
     focusedBorder: outlineInputBorder.copyWith(
-        borderSide: BorderSide(
+        borderSide: const BorderSide(
       color: kPrimary,
       width: 0.5,
     )),
@@ -44,7 +44,7 @@ InputDecoration buildCredentialDecoration({@required hintText, icon}) {
 
 BoxDecoration searchBoxDecoration() {
   return BoxDecoration(
-    color: Color(0xffF5F5F5),
+    color: const Color(0xffF5F5F5),
     borderRadius: BorderRadius.circular(6),
     border: Border.all(
       width: 1,

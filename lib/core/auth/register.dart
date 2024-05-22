@@ -15,17 +15,19 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
 class RegisterPage extends StatefulWidget {
+  const RegisterPage({super.key});
+
   @override
   _RegisterPageState createState() => _RegisterPageState();
 }
 
 class _RegisterPageState extends State<RegisterPage> {
   late AuthController auth;
-  TextEditingController _name = TextEditingController();
-  TextEditingController _username = TextEditingController();
-  TextEditingController _phone = TextEditingController();
-  TextEditingController _email = TextEditingController();
-  TextEditingController _pass = TextEditingController();
+  final TextEditingController _name = TextEditingController();
+  final TextEditingController _username = TextEditingController();
+  final TextEditingController _phone = TextEditingController();
+  final TextEditingController _email = TextEditingController();
+  final TextEditingController _pass = TextEditingController();
   @override
   void initState() {
     super.initState();
@@ -51,7 +53,7 @@ class _RegisterPageState extends State<RegisterPage> {
           icon: SvgPicture.asset(backIcon),
           onPressed: () => Get.back(),
         ),
-        title: Text("Account"),
+        title: const Text("Account"),
         backgroundColor: kPrimary,
         elevation: 0.0,
       ),
@@ -60,7 +62,7 @@ class _RegisterPageState extends State<RegisterPage> {
           child: Container(
             height: ResponsiveSize.screenHeight * 0.8,
             width: ResponsiveSize.screenWidth,
-            margin: EdgeInsets.symmetric(horizontal: 20),
+            margin: const EdgeInsets.symmetric(horizontal: 20),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -68,11 +70,11 @@ class _RegisterPageState extends State<RegisterPage> {
               children: [
                 Container(
                   decoration: BoxDecoration(
-                      color: Color(0xffFFFFFF),
+                      color: const Color(0xffFFFFFF),
                       borderRadius: BorderRadius.circular(0),
                       boxShadow: [
                         BoxShadow(
-                          offset: Offset(0, 2),
+                          offset: const Offset(0, 2),
                           blurRadius: 4,
                           color: Colors.black.withOpacity(0.15),
                         )
@@ -87,7 +89,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       // mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         // getVerticalSpace(20),
-                        AuthHeadingText(text: "Sign Up", fontSize: 30),
+                        const AuthHeadingText(text: "Sign Up", fontSize: 30),
                         getVerticalSpace(30),
                         Row(
                           children: [
@@ -131,7 +133,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         ),
                         getVerticalSpace(30),
                         if (auth.isLoading.value)
-                          LoadingIndicator()
+                          const LoadingIndicator()
                         else
                           CustomButton(
                             text: "Sign Up Now",
@@ -172,7 +174,7 @@ class _RegisterPageState extends State<RegisterPage> {
         );
 
         if (result) {
-          Get.off(() => LoginPage());
+          Get.off(() => const LoginPage());
         } else {
           SnackMessage.instance.showSnack(message: auth.errorMsg.value);
         }
@@ -182,7 +184,7 @@ class _RegisterPageState extends State<RegisterPage> {
     } else {
       print("Field are empty");
       ScaffoldMessenger.of(context)
-          .showSnackBar(SnackBar(content: Text("Field can't be empty")));
+          .showSnackBar(const SnackBar(content: Text("Field can't be empty")));
     }
   }
 }

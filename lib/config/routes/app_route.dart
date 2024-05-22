@@ -17,31 +17,31 @@ class AppRoute {
   static final AppRoute _instance = AppRoute._();
   static AppRoute get instance => _instance;
 
-  static final String splashPage = "/splash";
-  static final String landingPage = "/landing";
-  static final String loginPage = "/login";
-  static final String registerPage = "/register";
-  static final String productPage = "/product";
-  static final String detailsPage = "/details";
-  static final String wishPage = "/wish";
-  static final String addressPage = "/billing";
-  static final String aboutPage = "/about";
-  static final String conditionPage = "/condition";
-  static final String orderPage = "/order";
-  static final String searchPage = "/search";
+  static const String splashPage = "/splash";
+  static const String landingPage = "/landing";
+  static const String loginPage = "/login";
+  static const String registerPage = "/register";
+  static const String productPage = "/product";
+  static const String detailsPage = "/details";
+  static const String wishPage = "/wish";
+  static const String addressPage = "/billing";
+  static const String aboutPage = "/about";
+  static const String conditionPage = "/condition";
+  static const String orderPage = "/order";
+  static const String searchPage = "/search";
 
   static List<GetPage> getPage = [
-    GetPage(name: splashPage, page: () => SplashPage()),
-    GetPage(name: landingPage, page: () => LandingPage()),
-    GetPage(name: loginPage, page: () => LoginPage()),
-    GetPage(name: registerPage, page: () => RegisterPage()),
-    GetPage(name: productPage, page: () => ProductPage()),
-    GetPage(name: detailsPage, page: () => ProductDetails()),
-    GetPage(name: wishPage, page: () => WishPage()),
-    GetPage(name: addressPage, page: () => BillingAddress()),
-    GetPage(name: aboutPage, page: () => AboutPage()),
-    GetPage(name: conditionPage, page: () => ConditionsPage()),
-    GetPage(name: orderPage, page: () => MyOrderPage()),
-    GetPage(name: searchPage, page: () => SearchResultPage()),
+    GetPage(name: splashPage, page: () => const SplashPage()),
+    GetPage(name: landingPage, page: () => const LandingPage()),
+    GetPage(name: loginPage, page: () => const LoginPage()),
+    GetPage(name: registerPage, page: () => const RegisterPage()),
+    GetPage(name: productPage, page: () => const ProductPage()),
+    GetPage(name: detailsPage, page: () => const ProductDetails()),
+    GetPage(name: wishPage, page: () => const WishPage()),
+    GetPage(name: addressPage, page: () => const BillingAddress()),
+    GetPage(name: aboutPage, page: () => const AboutPage()),
+    GetPage(name: conditionPage, page: () => const ConditionsPage()),
+    GetPage(name: orderPage, page: () => const MyOrderPage()),
+    GetPage(name: searchPage, page: () => const SearchResultPage()),
   ];
 }
