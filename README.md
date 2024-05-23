@@ -53,9 +53,9 @@ api secret
 Env File Setup
 
 Create a `.env `file in the root and add the following\
-`DATABASE_NAME = mongodb database name\
-DATABASE_USER = mongodb user name\
-DATABASE_PASSWORD = mongodb password\
+`DATABASE_NAME = afc
+DATABASE_USER = afc
+DATABASE_PASSWORD = 1234
 JWT_SECRET = 'abc123'\
 CLOUDINARY_NAME= set cloudinary name\
 CLOUDINARY_API_KEY= cloudinary api key\
