@@ -20,7 +20,7 @@ Step 1: You'll need to install [Node.js >=v10.0+ (Recommended Version)](https:
 
 -   Projects Structure
 
-In the downloaded folder you will found 1 folder called Econix and into it you will find client and src folder
+In the downloaded folder you will found 1 folder called backend and into it you will find client and src folder
 
 -   *client*
 
@@ -53,9 +53,9 @@ api secret
 Env File Setup
 
 Create a `.env `file in the root and add the following\
-`DATABASE_NAME = mongodb database name\
-DATABASE_USER = mongodb user name\
-DATABASE_PASSWORD = mongodb password\
+`DATABASE_NAME = afc
+DATABASE_USER = afc
+DATABASE_PASSWORD = 1234
 JWT_SECRET = 'abc123'\
 CLOUDINARY_NAME= set cloudinary name\
 CLOUDINARY_API_KEY= cloudinary api key\
