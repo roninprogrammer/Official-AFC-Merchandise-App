@@ -20,7 +20,7 @@ Step 1: You'll need to install [Node.js >=v10.0+ (Recommended Version)](https:
 
 -   Projects Structure
 
-In the downloaded folder you will found 1 folder called Econix and into it you will find client and src folder
+In the downloaded folder you will found 1 folder called backend and into it you will find client and src folder
 
 -   *client*
 
