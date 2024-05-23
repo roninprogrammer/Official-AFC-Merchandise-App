@@ -1,4 +1,4 @@
-const baseUrl = "https://econix-react.envytheme.com";
+const baseUrl = "https://localhost:8080";
 const registerPath = "/user/register";
 const loginPath = "/user/login";
 const productPath = "/products";

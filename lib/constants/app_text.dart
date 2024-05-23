@@ -87,13 +87,13 @@ List reivewText = [
     'name': 'Jonathond H.',
     'time': '3 weeks ago',
     'comment':
-        "100% Authentic Product. Recommend highly the Econix Store. Great Product!"
+        "100% Authentic Product. Recommend highly the AFC Store. Great Product!"
   },
   {
     'name': 'Anderson Coo.',
     'time': '5 weeks ago',
     'comment':
-        "100% Authentic Product. Recommend highly the Econix Store. Great Product!"
+        "100% Authentic Product. Recommend highly the AFC Store. Great Product!"
   }
 ];
 

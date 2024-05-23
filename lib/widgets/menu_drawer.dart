@@ -41,7 +41,7 @@ class MenuDrawer extends StatelessWidget {
                             height: getScreenHeight(30),
                             // width: getScreeWidth(55),
                             child: Text(
-                              "Econix",
+                              "AFC",
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: getTextSize(30),
@@ -159,7 +159,8 @@ class MenuDrawer extends StatelessWidget {
 }
 
 class DrawerItem extends StatelessWidget {
-  const DrawerItem({super.key, this.title, this.press, this.icon, this.textColor = kDark});
+  const DrawerItem(
+      {super.key, this.title, this.press, this.icon, this.textColor = kDark});
   final String? title;
   final VoidCallback? press;
   final String? icon;
