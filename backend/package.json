@@ -23,7 +23,8 @@
     "express": "^4.17.1",
     "express-fileupload": "^1.2.0",
     "express-validator": "^6.10.0",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.6.2",
     "mongoose": "^5.11.11"
   },
   "devDependencies": {
